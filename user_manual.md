@@ -24,3 +24,7 @@ python3 plot_heatmap.py
 Or specify the `--down-scale`, `--time` and `--config` parameters. The `--down-scale` parameter is used to downscale the resulting image. The `--time` parameter is used to specify from how far back in time up until now the data should be fetched. The `--config` parameter is used to specify the config file to use.
 
 See the `secrets_empty.yaml` file for an example of the config file and fill it out.
+
+## Example Heatmap
+An example output of the `plot_heatmap.py` script is shown below.
+![Example Heatmap](example_heatmap.png)

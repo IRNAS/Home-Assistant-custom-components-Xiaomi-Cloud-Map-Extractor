@@ -87,9 +87,12 @@ def run(secrets_file, query_duration, display_resolution_downscale):
             date_obj = datetime.strptime(val, "%Y-%m-%dT%H:%M:%S.%f")
             date_obj += timedelta(hours=2)
         except Exception as e:
-            date_obj = datetime.strptime(dpt.get("time")[:-4], "%Y-%m-%dT%H:%M:%S")
-            date_obj += timedelta(hours=2)
-            print(f"EXCEPTION")
+            try:
+                date_obj = datetime.strptime(val, "%Y-%m-%dT%H:%M:%S")
+                date_obj += timedelta(hours=2)
+            except Exception as e:
+                print(f"EXCEPTION")
+
         ts = int(date_obj.timestamp() * 10**3)
         dpts_rssi.append({"ts": ts, "rssi": dpt.get("rssi")})
 
