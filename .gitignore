@@ -154,3 +154,5 @@ cython_debug/
 secrets.yaml
 camera.yaml
 camera/*
+nohup.out
+rf_map*.png
